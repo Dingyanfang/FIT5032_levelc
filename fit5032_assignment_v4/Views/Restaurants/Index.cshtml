@@ -1,0 +1,82 @@
+﻿@model IEnumerable<fit5032_assignment_v4.Models.Restaurant>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantOwner.OwnerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantCountry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantSuburb)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantStreet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantPostcode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestaurantOwner.OwnerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestaurantName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestaurantDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestaurantCountry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestaurantState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestaurantCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestaurantSuburb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestaurantStreet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestaurantPostcode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RestaurantId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RestaurantId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RestaurantId })
+        </td>
+    </tr>
+}
+
+</table>

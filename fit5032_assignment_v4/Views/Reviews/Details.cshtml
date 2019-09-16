@@ -1,0 +1,43 @@
+﻿@model fit5032_assignment_v4.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Appointment.CustomerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appointment.CustomerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewRate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

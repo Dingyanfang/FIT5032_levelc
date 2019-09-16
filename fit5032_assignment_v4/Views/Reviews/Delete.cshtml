@@ -1,0 +1,49 @@
+﻿@model fit5032_assignment_v4.Models.Review
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Appointment.CustomerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appointment.CustomerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewRate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

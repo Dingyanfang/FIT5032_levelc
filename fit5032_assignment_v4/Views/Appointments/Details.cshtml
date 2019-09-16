@@ -1,0 +1,43 @@
+﻿@model fit5032_assignment_v4.Models.Appointment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Restaurant.RestaurantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Restaurant.RestaurantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Review.ReviewDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Review.ReviewDesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
